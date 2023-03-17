@@ -1,14 +1,21 @@
 # Boilerplate
-# Setup
+
+### Setup
  1. Initialize virtual env: `make venv`
  2. Activate it with: `. env/bin/activate`
  3. Install dependencies: `make install`
 
-# Notes
+### Notes
 - Run application: `make run`
-- Run unit tests: `make test`
-- Make code pretty:`make format`
+- Run unit tests (whole codebase): `make test`
+<!-- - Run unit tests (specifc directory/file):`FLASK_ENV=test pytest app/app.py` -->
+- Make code pretty: `make format`
 - Lint code: `make lint`
 
-
-# python_app_boilerplate
+### Postgres setup:
+1. `brew install postgresql`
+2. `brew services start postgresql`
+3. Create db user `test` with password `test`: `createuser -sP houst`
+4. Create unit test db: `createdb -O test test_test`
+5. Create development db: `createdb -O test test_dev`
+<!-- 6. `./seed.py --rebuild-db` -->
