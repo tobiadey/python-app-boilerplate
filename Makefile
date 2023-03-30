@@ -2,7 +2,6 @@
 run-dev:
 	python3 -m wsgi
 
-
 # Run unit tests (default rule)
 test:
 	python3 -m pytest
